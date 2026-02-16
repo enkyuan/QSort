@@ -164,8 +164,8 @@ int countNewLine(FILE * fptr)
 #ifdef TEST_SORTID
 	int compareID(const void * p1, const void * p2)
 	{	
-		Student * student1 = (const Student *) p1;
-		Student * student2 = (const Student *) p2;
+		const Student * student1 = (const Student *) p1;
+		const Student * student2 = (const Student *) p2;
 		/* Fill in to compare p1 and p2 by id */
 		// return a negative value if the ID of the first student is smaller
 		// return a positive value if the ID of the first student is larger
