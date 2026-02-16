@@ -91,9 +91,13 @@ int countNewLine(FILE * fptr)
 		// store the data to the array stuptr
 		// fclose the file after read of data is done
 		int i = 0;
+
+		int id;
+		char name[80];
+
 		while (fscanf(fptr, "%d %79s", &id, name) == 2) 
 		{
-			stuptr[i].ID = &id;
+			stuptr[i].ID = id;
 			strcpy(stuptr[i].name, name);
 
 			i++;
@@ -114,7 +118,7 @@ int countNewLine(FILE * fptr)
 #ifdef TEST_WRITE
 	bool StudentWrite(char * filename, Student * stu, int numelem)
 	{
-		File * fptr;
+		FILE * fptr;
 		// open the file to write
 		// the name of file to open is stored in string filename
 		// if fopen fails, return false
@@ -133,7 +137,7 @@ int countNewLine(FILE * fptr)
 
 		for (int i = 0; i < numelem; i++) 
 		{
-			fprintf(fileptr, "%d %s\n", stu[i].ID, stu[i].name);	
+			fprintf(fptr, "%d %s\n", stu[i].ID, stu[i].name);	
 		}
 		
 		fclose(fptr);
