@@ -188,8 +188,8 @@ int countNewLine(FILE * fptr)
 #ifdef TEST_SORTNAME
 	int compareName(const void * p1, const void * p2)
 	{	
-		Student * student1 = (const Student *) p1;
-		Student * student2 = (const Student *) p2;
+		const Student * student1 = (const Student *) p1;
+		const Student * student2 = (const Student *) p2;
 		/* Fill in to compare p1 and p2 by name */
 		// use strcmp function to compare two strings
 		// return a negative value if the name of the first student is alphabetically earlier
