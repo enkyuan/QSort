@@ -95,7 +95,7 @@ Student * merge(Student * base1, int nel1, Student * base2, int nel2, int (*comp
 	//FILL IN
 	int i = 0;
 	int j = 0;
-	int ka = 0;
+	int k = 0;
 	//3. Go through base1 and base2, and merge them into the returned array
 
 	//FILL IN
