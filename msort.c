@@ -107,6 +107,8 @@ Student * merge(Student * base1, int nel1, Student * base2, int nel2, int (*comp
 			sortedArr[k] = base2[j];
 			j++;
 		}
+
+		k++;
 	}
 
 	while (i < nel1) {
